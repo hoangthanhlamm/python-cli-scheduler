@@ -9,15 +9,15 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="cli_handler",
+    name="python-cli-handler",
     version=version,
     author="Lam Hoang",
     author_email="hoangthanhlamm@gmail.com",
     description="Support scheduling of task via command line interface.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/hoangthanhlamm/cli_scheduler",
-    project_urls={"Bug Tracker": "https://github.com/hoangthanhlamm/cli_scheduler", },
+    url="https://github.com/hoangthanhlamm/python-cli-scheduler",
+    project_urls={"Bug Tracker": "https://github.com/hoangthanhlamm/python-cli-scheduler", },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

@@ -4,7 +4,7 @@ Library support scheduling of task via command line interface.
 
 ## Installation
 ```shell
-pip3 install cli_handler
+pip3 install python-cli-scheduler
 ```
 
 ## Example
