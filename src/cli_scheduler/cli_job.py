@@ -8,6 +8,9 @@ logger = get_logger('CLI Job')
 
 
 class CLIJob:
+    """
+    Deprecated. Use SchedulerJob instead.
+    """
     def __init__(self, interval=None, end_timestamp=None, retry=True):
         self.interval = interval
         self.end_timestamp = end_timestamp
