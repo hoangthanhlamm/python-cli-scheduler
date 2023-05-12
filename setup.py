@@ -9,7 +9,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="python-cli-handler",
+    name="python-cli-scheduler",
     version=version,
     author="Lam Hoang",
     author_email="hoangthanhlamm@gmail.com",

@@ -1,5 +1,16 @@
 #!/bin/bash
 
+while getopts v: flag
+do
+    case "${flag}" in
+        v) version=${OPTARG};;
+        a*)
+    esac
+done
+
+echo "Version: $version"
+echo "__version__ = \"$version\"" > src/cli_scheduler/__init__.py
+
 # Setup
 python3 -m pip install build twine
 
