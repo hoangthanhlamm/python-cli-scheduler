@@ -64,18 +64,20 @@ class SchedulerJob:
         self.delay = kwargs.get('delay', 0)
         self.run_now = kwargs.get('run_now', True)
 
+        if (not self.run_now) and (self.interval is None):
+            raise ValueError('At least one of the two parameters <run_now> and <interval> must be set positive value')
+
         self.next_synced_timestamp = None
 
         self.logger = get_logger(self.__class__.__name__)
 
     def run(self, *args, **kwargs):
         self._pre_start()
-        counter = 0
         while True:
             # Check run now. If not, wait to the first execute
             if not self.run_now:
                 self._get_next_synced_timestamp()
-                if self._check_finish(counter):
+                if self._check_finish():
                     break
                 self._wait_to_next_synced()
 
@@ -89,15 +91,15 @@ class SchedulerJob:
                     self.run_now = True  # To retry now
                     continue
 
-            counter += 1
             self.run_now = False  # To wait for the next execute
             self._end()
 
         self._follow_end()
 
     def _get_next_synced_timestamp(self):
-        self.next_synced_timestamp = round_timestamp(
-            self.next_synced_timestamp or int(time.time()), round_time=self.interval) + self.interval + self.delay
+        if self.interval is not None:
+            self.next_synced_timestamp = round_timestamp(
+                self.next_synced_timestamp or int(time.time()), round_time=self.interval) + self.interval + self.delay
 
         # Get the next execute timestamp
         return self.next_synced_timestamp
@@ -113,9 +115,9 @@ class SchedulerJob:
         self.logger.exception(ex)
         self.logger.warning('Something went wrong!!!')
 
-    def _check_finish(self, counter):
+    def _check_finish(self):
         # Check if not repeat
-        if (self.interval is None) and (not counter):
+        if self.interval is None:
             return True
 
         # Check if over end timestamp
