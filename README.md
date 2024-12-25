@@ -41,7 +41,7 @@ You can use the `scheduler_handle` decorator to execute recurring tasks. Below i
 import random
 import time
 
-from cli_scheduler.scheduler_handle import scheduler_handle
+from cli_scheduler import scheduler_handle
 
 end_time = int(time.time()) + 30
 
@@ -64,7 +64,7 @@ With `SchedulerJob`, you gain more control over the task execution lifecycle. Th
 import time
 import random
 
-from cli_scheduler.scheduler_job import SchedulerJob
+from cli_scheduler import SchedulerJob
 
 
 class RotationLuckJob(SchedulerJob):

@@ -1,7 +1,7 @@
 import random
 import time
 
-from cli_scheduler.scheduler_handle import scheduler_handle
+from cli_scheduler import scheduler_handle
 
 end_time = int(time.time()) + 30
 

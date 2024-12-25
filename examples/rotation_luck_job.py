@@ -1,7 +1,7 @@
 import random
 import time
 
-from cli_scheduler.scheduler_job import SchedulerJob
+from cli_scheduler import SchedulerJob
 
 
 class RotationLuckJob(SchedulerJob):

@@ -2,10 +2,8 @@ import time
 
 from cli_scheduler.constants.time_constants import SLEEP_DURATION
 from cli_scheduler.utils.logger_utils import get_logger
-from cli_scheduler.utils.parse_scheduler_utils import parse_scheduler_kwargs
+from cli_scheduler.utils.parse_scheduler_utils import parse_scheduler_kwargs, scheduler_format
 from cli_scheduler.utils.time_utils import round_timestamp, human_readable_time
-
-scheduler_format = '^<run_now>@<interval>/<delay>$<end_timestamp>#<retry>'
 
 
 class SchedulerJob:

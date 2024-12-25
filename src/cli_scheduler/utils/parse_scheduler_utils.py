@@ -3,6 +3,8 @@ from typing import Union
 
 from cli_scheduler.constants.time_constants import TimeInterval
 
+scheduler_format = '^<run_now>@<interval>/<delay>$<end_timestamp>#<retry>'
+
 
 def parse_scheduler_kwargs(schedule: str):
     def to_bool(d_str: str) -> bool:

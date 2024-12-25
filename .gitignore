@@ -62,5 +62,3 @@ log_performance_file.csv
 .vscode
 
 **/.DS_Store
-
-src/cli_scheduler/__init__.py
