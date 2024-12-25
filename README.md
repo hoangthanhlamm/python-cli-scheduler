@@ -2,7 +2,6 @@
 
 A Python library supporting task scheduling.
 
----
 ## Installation
 
 Install the package using `pip`:
@@ -11,7 +10,6 @@ Install the package using `pip`:
 pip install python-cli-scheduler
 ```
 
----
 ## Schedule Format
 
 The scheduler format defines how tasks are executed. Use:
@@ -30,7 +28,6 @@ The scheduler format defines how tasks are executed. Use:
 | `end_timestamp` | UNIX timestamp to stop execution. If `None`, runs infinitely.       | `None`  |
 | `retry`         | Retry execution if an exception occurs (`True` or `False`).         | `True`  |
 
----
 ## Usage
 
 ### Use a Decorator
@@ -99,7 +96,6 @@ if __name__ == '__main__':
     job.run()
 ```
 
----
 ## Features
 - **Task Scheduling**: Automates task execution using a flexible crontab-like syntax.
 - **Decorator Support**: Simplifies task scheduling using Python function decorators.
@@ -112,10 +108,8 @@ if __name__ == '__main__':
 
 - **Retry Support**: Retry tasks in case of runtime exceptions.
 
----
 ## License
 This library is licensed under the MIT License. See the `LICENSE` file for more details.
 
----
 ## Contributing
 Contributions are welcome! Feel free to submit issues, feature requests, or pull requests to improve the library.
