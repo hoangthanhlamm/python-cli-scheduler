@@ -1,8 +1,10 @@
 import logging
 from logging.handlers import RotatingFileHandler
 
-FORMATTER = logging.Formatter(fmt='[%(asctime)s] [%(levelname)s] [%(name)s] - %(message)s',
-                              datefmt='%m-%d-%Y %H:%M:%S %Z')
+FORMATTER = logging.Formatter(
+    fmt='[%(asctime)s] [%(levelname)s] [%(name)s] - %(message)s',
+    datefmt='%m-%d-%Y %H:%M:%S %Z'
+)
 LOG_FILE = 'logging.log'
 
 
@@ -20,7 +22,9 @@ def get_file_handler():
 
 def get_logger(logger_name):
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.DEBUG)
-    logger.addHandler(get_console_handler())
-    # logger.addHandler(get_file_handler())
+    if not logger.hasHandlers():
+        logger.setLevel(logging.DEBUG)
+        logger.addHandler(get_console_handler())
+        # logger.addHandler(get_file_handler())
+
     return logger

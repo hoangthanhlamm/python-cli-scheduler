@@ -19,8 +19,6 @@ Parameters:
 - `end_time`: Execute until `end_time`. If set to `None`, infinite repeat. Default: `None`
 - `retry`: Retry if exception when executed. Default: `True`
 
-## Example
-
 ### Use with decorator
 
 Coming soon

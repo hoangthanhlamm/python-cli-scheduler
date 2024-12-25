@@ -10,10 +10,12 @@ class TimeConstants:
 class TimeInterval:
     hourly = 'hourly'
     daily = 'daily'
+    weekly = 'weekly'
     monthly = 'monthly'
 
     mapping = {
         hourly: TimeConstants.A_HOUR,
         daily: TimeConstants.A_DAY,
+        weekly: 7 * TimeConstants.A_DAY,
         monthly: TimeConstants.DAYS_30
     }
