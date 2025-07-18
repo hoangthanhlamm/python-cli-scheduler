@@ -7,7 +7,7 @@ from cli_scheduler.utils.parse_scheduler_utils import parse_scheduler_kwargs, sc
 from cli_scheduler.utils.time_utils import round_timestamp, human_readable_time
 
 
-class SchedulerJob:
+class AsyncSchedulerJob:
     """Base for jobs that need to be run continually"""
     def __init__(self, scheduler=None, **kwargs):
         f"""
