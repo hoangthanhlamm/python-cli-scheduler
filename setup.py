@@ -20,7 +20,6 @@ setuptools.setup(
     project_urls={"Bug Tracker": "https://github.com/hoangthanhlamm/python-cli-scheduler", },
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     package_dir={"": "src"},

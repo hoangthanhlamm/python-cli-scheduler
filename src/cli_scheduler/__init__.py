@@ -1,4 +1,4 @@
-__version__ = "1.1.5"
+__version__ = "1.1.6"
 
 __all__ = ["Scheduler", "scheduler_handle", "SchedulerJob"]
 

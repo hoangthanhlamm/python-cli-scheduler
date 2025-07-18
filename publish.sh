@@ -18,7 +18,7 @@ fi
 echo "Version: $version"
 
 # Setup
-python3 -m pip install build twine
+python3 -m pip install  --upgrade build twine setuptools wheel
 
 # Clear dist
 rm -rf dist/
